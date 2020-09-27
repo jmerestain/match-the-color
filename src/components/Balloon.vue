@@ -1,6 +1,6 @@
 <template>
     <div id="porn">
-            <p id="word" class="absolute text-center font-medium text-xl w-full">
+            <p id="word" class="absolute text-center font-medium text-xl w-full z-30">
                 {{ word }}
             </p>
             <svg id="balloon" :fill="colorParse" width="572" height="725" viewBox="0 0 572 725" xmlns="http://www.w3.org/2000/svg">

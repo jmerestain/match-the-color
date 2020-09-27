@@ -3,7 +3,7 @@
         <div id="box" class="border-t-4 border-b-4 border-orange-900 flex-col h-full
         gap-2 relative justify-between">
             <div class="flex flex-row items-start">
-                <div id="redCheck" class="h-20 w-full bg-red-500">
+                <div id="redCheck" class="h-24 w-full bg-red-500">
                     <p class="text-red-800 text-center
                     my-auto font-medium p-2 select-none">
                         &nbsp;
