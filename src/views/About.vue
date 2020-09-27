@@ -1,6 +1,7 @@
 <template>
   <div id="mechanics-mm" class="flex flex-col container mx-auto justify-center">
-        <h1 class="text-center text-6xl fuckthis uppercase font-bold px-2">
+        <h1 class="text-center text-6xl fuckthis
+        uppercase font-bold px-2 text-4xl md:text-6xl lg:text-6xl">
           Mechanics
         </h1>
         <div class="bg-mechanics text-orange-900

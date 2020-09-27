@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
     #balloon {
         z-index: 10;
         width: 84px;
