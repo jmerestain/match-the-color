@@ -1,6 +1,6 @@
 <template>
     <div id="porn">
-            <p id="word" class="absolute text-center font-medium text-xl w-full z-30">
+            <p id="word" class="absolute text-center font-bold text-xl w-full z-30">
                 {{ word }}
             </p>
             <svg id="balloon" :fill="colorParse" width="572" height="725" viewBox="0 0 572 725" xmlns="http://www.w3.org/2000/svg">
@@ -34,6 +34,7 @@ export default {
 
 <style scoped>
     #balloon {
+        z-index: 10;
         width: 84px;
         height: 108px;
     }
@@ -42,6 +43,7 @@ export default {
         left: 50%;
     }
     #word {
+        color: rgba(19, 12, 12, 0.9);
         opacity: 50%;
         top: 30%;
     }

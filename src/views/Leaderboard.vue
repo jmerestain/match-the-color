@@ -1,7 +1,7 @@
 <template>
     <div id="leaderboard" class="container mx-auto">
         <div class="flex flex-col pt-10 justify-between">
-            <h1 class="text-center text-6xl fuckthis uppercase font-bold">
+            <h1 class="text-center text-6xl fuckthis uppercase font-bold px-2">
                 Leaderboard
             </h1>
             <div class="pt-20">
