@@ -9,19 +9,19 @@
                         &nbsp;
                     </p>
                 </div>
-                <div id="blueCheck" class="h-20 w-full bg-blue-600">
+                <div id="blueCheck" class="h-24 w-full bg-blue-600">
                     <p class="text-blue-900 text-center
                     my-auto font-medium p-2 select-none">
                         &nbsp;
                     </p>
                 </div>
-                <div id="greenCheck" class="h-20 w-full bg-green-500">
+                <div id="greenCheck" class="h-24 w-full bg-green-500">
                     <p class="text-green-900 text-center
                     my-auto font-medium p-2 select-none">
                         &nbsp;
                     </p>
                 </div>
-                <div id="yellowCheck" class="h-20 w-full bg-yellow-400">
+                <div id="yellowCheck" class="h-24 w-full bg-yellow-400">
                     <p class="text-yellow-700 text-center
                     my-auto font-medium p-2 select-none">
                         &nbsp;
@@ -40,17 +40,17 @@
             </div>
         </div>
         <div id="controls" class="flex flex-row gap-1 flex-grow items-center container mx-auto">
-            <a href="#" class="bg-alphacamp text-white text-4xl flex-grow
-            text-center h-20 p-3 select-none my-auto font-medium"
+            <a href="#" class="bg-alphacamp text-white text-xl lg:text-4xl md:text-4xl flex-grow
+            text-center h-20 p-3 select-none my-auto font-medium flex-shrink"
             @click="startGame">
                 Play Now
             </a>
-            <p class="bg-alphacamp text-white text-4xl flex-grow
-            text-center h-20 p-3 select-none my-auto">
+            <p class="bg-alphacamp text-white text-xl md:text-4xl lg:text-4xl flex-grow
+            text-center h-20 p-3 select-none my-auto flex-shrink">
                 Score: {{ score }}
             </p>
-            <p class="bg-alphacamp text-white text-4xl flex-grow
-            text-center h-20 p-3 select-none my-auto">
+            <p class="bg-alphacamp text-white text-xl lg:text-4xl md:text-4xl flex-grow
+            text-center h-20 p-3 select-none my-auto flex-shrink">
                 Time: {{ timer.time }}
             </p>
         </div>
@@ -139,7 +139,7 @@ export default {
         onCompleteParams: [balloonObj, balloon],
       });
       balloon.timeline.to(balloon, {
-        y: -420,
+        y: -460,
         duration: 5,
       });
       // eslint-disable-next-line no-restricted-globals
