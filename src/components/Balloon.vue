@@ -43,8 +43,7 @@ export default {
         left: 50%;
     }
     #word {
-        color: rgba(19, 12, 12, 0.9);
-        opacity: 50%;
+        color: rgba(19, 12, 12, 0.4);
         top: 30%;
     }
 </style>
