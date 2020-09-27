@@ -31,7 +31,7 @@
                     </ul>
                 </div>
                 <img width="358.4px" height="417.2px"
-                class="p-4 my-auto"
+                class="p-4 my-auto mx-auto md:mx-0 lg:mx-0"
                 :src="require('@/assets/img/mech-1-ex.png')" />
             </div>
             <router-link to="/game" class="w-full text-white uppercase text-3xl

@@ -249,7 +249,7 @@ export default {
         top: 22rem;
     }
     #balloons {
-        height: 60vh;
+        height: 70vh;
     }
     .bg-alphacamp {
         background-color: #6D3B00;
