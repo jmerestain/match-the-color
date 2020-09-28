@@ -3,7 +3,7 @@
     <img class="mx-auto pb-10"
     :src="require('@/assets/svg/logo.svg')" height="260px" width="320px"/>
     <div id="banner" class="w-full mx-auto my-auto p-3 mb-20 border-t-2 border-b-2 border-white">
-      <p class="text-6xl text-white font-medium uppercase text-center select-none">
+      <p class="text-6xl text-white font-medium uppercase text-center select-none title">
         Match the Color
       </p>
     </div>
@@ -25,3 +25,19 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.title {
+    font-family: ChalkitUp;
+    font-weight: 500;
+    text-shadow:
+   -2px -2px 0 rgba(109, 59, 0, 1),
+    2px -2px 0 rgba(109, 59, 0, 1),
+    -2px 2px 0 rgba(109, 59, 0, 1),
+     2px 2px 0 rgba(109, 59, 0, 1);
+  }
+  @font-face {
+    font-family: ChalkitUp;
+    src: url('../assets/font/chalkitup-title.ttf');
+  }
+</style>

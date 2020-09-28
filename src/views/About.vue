@@ -4,14 +4,14 @@
         uppercase font-bold px-2 text-4xl md:text-6xl lg:text-6xl">
           Mechanics
         </h1>
-        <div class="bg-mechanics text-orange-900
-        border-2 border-mechanics text-mechanics flex flex-col mt-10">
-            <div class="flex flex-row flex-wrap justify-between">
-                <div class="max-w-3xl p-4 my-auto">
+        <div class="bg-mechanics border-4 border-mechanics
+        text-mechanics flex flex-col mt-10">
+            <div class="flex flex-row flex-wrap justify-around items-center">
+                <div class="max-w-3xl p-10">
                     <p class="text-2xl font-medium pb-4">
                         A timed challenge where players group ballons by colors.
                     </p>
-                    <ul class="pl-4 space-y-4">
+                    <ul class="pl-4 space-y-3">
                       <li>
                         <p class="text-xl font-medium">
                             In 60 seconds, group the balloons according to the written
@@ -35,9 +35,9 @@
                 class="p-4 my-auto mx-auto md:mx-0 lg:mx-0"
                 :src="require('@/assets/img/mech-1-ex.png')" />
             </div>
-            <router-link to="/game" class="w-full text-white uppercase text-3xl
-            bg-alphacamp p-2 border-2 border-double mx-auto text-center
-            container uppercase font-medium">
+            <router-link to="/game" class="text-white uppercase text-3xl
+            bg-alphacamp py-2 px-8 mb-2 border-2 border-mechanics
+            border-double mx-auto text-center">
                 Ready
             </router-link>
         </div>
@@ -70,6 +70,6 @@ export default {
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #6D3B00;
-    text-shadow: -1px 1px 3px rgba(109, 59, 0, 0.6), -3px 3px 1px rgba(109, 59, 0, 0.3);
+    text-shadow: -1px 1px 3px rgba(109, 59, 0, 0.8), -3px 3px 1px rgba(109, 59, 0, 0.6);
 }
 </style>

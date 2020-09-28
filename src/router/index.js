@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import Mechanics from '../views/About.vue';
 import Game from '../views/Main.vue';
 import Leaderboard from '../views/Leaderboard.vue';
+import Ending from '../views/Retry.vue';
 
 Vue.use(VueRouter);
 
@@ -36,6 +37,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: Leaderboard,
+  },
+  {
+    path: '/ending',
+    name: 'Ending',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Ending,
   },
 ];
 
