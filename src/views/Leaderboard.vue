@@ -9,15 +9,16 @@
                     <img src="../assets/img/Your rank is.png"
                     class="mx-auto max-w-xs mt-10 p-4 w-full"/>
                     <div class="flex flex-row text-center text-6xl uppercase max-w-md
-                    font-black text-white justify-around items-baseline banner mx-auto">
+                    font-black text-white justify-around items-center banner mx-auto p-2
+                    select-none">
                         <p>1</p>
-                        <p>{{ this.$store.state.highScore }} <small>pts</small></p>
+                        <p>{{ this.$store.state.highScore }}</p>
                     </div>
                 </div>
                 <div class="flex flex-row justify-center mt-10">
                     <router-link to="/leaderboard" class="bg-alphacamp font-gotham text-center
                     py-3 px-4 text-3xl text-white font-bold rounded-lg flex-grow max-w-xs
-                    font-bold">
+                    font-bold select-none">
                         Next
                     </router-link>
                 </div>
