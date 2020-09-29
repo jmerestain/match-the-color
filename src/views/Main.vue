@@ -131,13 +131,11 @@ export default {
       });
       balloon.style.left = `${position}px`;
       balloon.style.top = '70%';
-      balloon.timeline = gsap.timeline({
-        onComplete: this.hitTester,
-        onCompleteParams: [balloonObj, balloon],
-      });
-      balloon.timeline.to(balloon, {
+      gsap.to(balloon, {
         y: -460,
         duration: 4,
+        onUpdate: this.hitTester,
+        onUpdateParams: [balloonObj, balloon],
       });
       // eslint-disable-next-line no-restricted-globals
     },
@@ -149,28 +147,32 @@ export default {
           console.log('SCORED RED');
           this.score += 1;
         }
-        this.activeBalloons.splice(balloonObj.id, 1);
+        balloon.parentNode.removeChild(balloon);
+        // this.activeBalloons.splice(this.activeBalloons.indexOf(balloon), 1);
       }
       if (Draggable.hitTest(balloon, '#blueCheck', 10)) {
         if (balloonObj.wordId == 'BLUE') {
           console.log('HELLO BLUE');
           this.score += 1;
         }
-        this.activeBalloons.splice(balloonObj.id, 1);
+        balloon.parentNode.removeChild(balloon);
+        // this.activeBalloons.splice(this.activeBalloons.indexOf(balloon), 1);
       }
       if (Draggable.hitTest(balloon, '#greenCheck', 10)) {
         console.log('HELLO GREEN');
         if (balloonObj.wordId == 'GREEN') {
           this.score += 1;
         }
-        this.activeBalloons.splice(balloonObj.id, 1);
+        balloon.parentNode.removeChild(balloon);
+        // this.activeBalloons.splice(this.activeBalloons.indexOf(balloon), 1);
       }
       if (Draggable.hitTest(balloon, '#yellowCheck', 10)) {
         console.log('HELLO YELLOW');
         if (balloonObj.wordId == 'YELLOW') {
           this.score += 1;
         }
-        this.activeBalloons.splice(balloonObj.id, 1);
+        balloon.parentNode.removeChild(balloon);
+        // this.activeBalloons.splice(this.activeBalloons.indexOf(balloon), 1);
       }
     },
     startGame() {
