@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col justify-between h-screen">
         <div id="box" class="border-4 border-orange-900 flex-col h-full
-        gap-2 relative justify-between max-w-6xl m-auto mt-5">
+        gap-2 relative justify-between max-w-6xl m-auto">
             <div class="flex flex-row items-start">
                 <div id="redCheck" class="h-24 w-full bg-red-500">
                     <p class="text-red-800 text-center
