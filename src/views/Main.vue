@@ -132,7 +132,7 @@ export default {
       balloon.style.left = `${position}px`;
       balloon.style.top = '70%';
       gsap.to(balloon, {
-        y: -460,
+        y: -2000,
         duration: 4,
         onUpdate: this.hitTester,
         onUpdateParams: [balloonObj, balloon],
@@ -141,7 +141,7 @@ export default {
     },
     hitTester(balloonObj, balloon) {
       console.log('PLAYED');
-      if (Draggable.hitTest(balloon, '#redCheck', 10)) {
+      if (Draggable.hitTest(balloon, '#redCheck', 5)) {
         console.log('HELLO RED');
         if (balloonObj.wordId == 'RED') {
           console.log('SCORED RED');
@@ -150,7 +150,7 @@ export default {
         balloon.parentNode.removeChild(balloon);
         // this.activeBalloons.splice(this.activeBalloons.indexOf(balloon), 1);
       }
-      if (Draggable.hitTest(balloon, '#blueCheck', 10)) {
+      if (Draggable.hitTest(balloon, '#blueCheck', 5)) {
         if (balloonObj.wordId == 'BLUE') {
           console.log('HELLO BLUE');
           this.score += 1;
@@ -158,7 +158,7 @@ export default {
         balloon.parentNode.removeChild(balloon);
         // this.activeBalloons.splice(this.activeBalloons.indexOf(balloon), 1);
       }
-      if (Draggable.hitTest(balloon, '#greenCheck', 10)) {
+      if (Draggable.hitTest(balloon, '#greenCheck', 5)) {
         console.log('HELLO GREEN');
         if (balloonObj.wordId == 'GREEN') {
           this.score += 1;
@@ -166,7 +166,7 @@ export default {
         balloon.parentNode.removeChild(balloon);
         // this.activeBalloons.splice(this.activeBalloons.indexOf(balloon), 1);
       }
-      if (Draggable.hitTest(balloon, '#yellowCheck', 10)) {
+      if (Draggable.hitTest(balloon, '#yellowCheck', 5)) {
         console.log('HELLO YELLOW');
         if (balloonObj.wordId == 'YELLOW') {
           this.score += 1;
