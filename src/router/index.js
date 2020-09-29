@@ -3,8 +3,9 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Mechanics from '../views/About.vue';
 import Game from '../views/Main.vue';
-import Leaderboard from '../views/Leaderboard.vue';
+import Score from '../views/Leaderboard.vue';
 import Ending from '../views/Retry.vue';
+import Leaderboard from '../views/Ranking.vue';
 
 Vue.use(VueRouter);
 
@@ -31,12 +32,12 @@ const routes = [
     component: Game,
   },
   {
-    path: '/leaderboard',
-    name: 'Leaderboard',
+    path: '/score',
+    name: 'Score',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: Leaderboard,
+    component: Score,
   },
   {
     path: '/ending',
@@ -45,6 +46,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: Ending,
+  },
+  {
+    path: '/leaderboard',
+    name: 'Leaderboard',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Leaderboard,
   },
 ];
 

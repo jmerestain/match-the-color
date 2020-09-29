@@ -101,7 +101,7 @@ export default {
   },
   methods: {
     goLeaderboard() {
-      router.push('leaderboard');
+      router.push('score');
     },
     randomId() {
       // eslint-disable-next-line prefer-const

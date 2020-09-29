@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto flex flex-col justify-center align-center h-screen">
         <div class="m-auto">
-            <img :src="require('@/assets/img/Group 31.png')" class="w-full mx-auto max-w-lg" />
+            <img src="../assets/img/Group 31.png" class="w-full mx-auto max-w-lg" />
             <div class="flex flex-row mt-16 justify-center flex-wrap
             gap-2 mx-2">
                 <div class="border-mechanics px-1 py-1

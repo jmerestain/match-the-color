@@ -1,6 +1,6 @@
 <template>
   <div id="mechanics-mm" class="flex flex-col container mx-auto justify-center">
-        <img :src="require('@/assets/img/MECHANICS.png')"
+        <img src="../assets/img/MECHANICS.png"
         class="mx-auto max-w-md mt-10 p-4 w-full"/>
         <div class="bg-mechanics border-4 border-mechanics
         text-mechanics flex flex-col mt-10 m-10">
