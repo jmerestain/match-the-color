@@ -3,13 +3,14 @@
     <img class="mx-auto pb-10"
     :src="require('@/assets/svg/logo.svg')" height="260px" width="320px"/>
     <div id="banner" class="w-full mx-auto my-auto p-3 mb-20 border-t-2 border-b-2 border-white">
-      <p class="text-6xl text-white font-medium uppercase text-center select-none title">
+      <p class="text-6xl text-white font-medium uppercase text-center select-none
+      title tracking-wider">
         Match the Color
       </p>
     </div>
     <div class="flex flex-row flex-wrap justify-center text-white gap-5 uppercase">
-      <router-link to="/mechanics" class="am-button p-2 px-6 text-2xl rounded-lg
-      border-double border-4 border-orange-300 button-color">
+      <router-link to="/mechanics" class="p-2 px-6 text-2xl rounded-lg
+      border-double border-4 border-started bg-started font-gotham font-bold">
         Get Started
       </router-link>
     </div>
@@ -29,15 +30,20 @@ export default {
 <style scoped>
 .title {
     font-family: ChalkitUp;
-    font-weight: 500;
-    text-shadow:
-   -2px -2px 0 rgba(109, 59, 0, 1),
-    2px -2px 0 rgba(109, 59, 0, 1),
-    -2px 2px 0 rgba(109, 59, 0, 1),
-     2px 2px 0 rgba(109, 59, 0, 1);
+    font-weight: 300;
   }
   @font-face {
     font-family: ChalkitUp;
     src: url('../assets/font/chalkitup-title.ttf');
+  }
+  .bg-started {
+    background: #24397A;
+  }
+  @font-face {
+    font-family: GothamMedium;
+    src: url('../assets/font/gotham-score.otf');
+  }
+  .font-gotham {
+    font-family: GothamMedium;
   }
 </style>

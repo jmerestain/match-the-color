@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col justify-between h-screen">
-        <div id="box" class="border-t-4 border-b-4 border-orange-900 flex-col h-full
-        gap-2 relative justify-between">
+        <div id="box" class="border-4 border-orange-900 flex-col h-full
+        gap-2 relative justify-between max-w-6xl m-auto mt-5">
             <div class="flex flex-row items-start">
                 <div id="redCheck" class="h-24 w-full bg-red-500">
                     <p class="text-red-800 text-center
@@ -41,16 +41,19 @@
         </div>
         <div id="controls" class="flex flex-row gap-1 flex-grow items-center container mx-auto">
             <a href="#" class="bg-alphacamp text-white text-xl lg:text-4xl md:text-4xl flex-grow
-            text-center h-20 p-3 select-none my-auto font-medium flex-shrink"
+            text-center h-20 p-3 select-none my-auto font-medium flex-shrink font-gotham
+            font-bold"
             @click="startGame">
                 Play Now
             </a>
             <p class="bg-alphacamp text-white text-xl md:text-4xl lg:text-4xl flex-grow
-            text-center h-20 p-3 select-none my-auto flex-shrink">
+            text-center h-20 p-3 select-none my-auto flex-shrink font-gotham
+            font-bold">
                 Score: {{ score }}
             </p>
             <p class="bg-alphacamp text-white text-xl lg:text-4xl md:text-4xl flex-grow
-            text-center h-20 p-3 select-none my-auto flex-shrink">
+            text-center h-20 p-3 select-none my-auto flex-shrink font-gotham
+            font-bold">
                 Time: {{ timer.time }}
             </p>
         </div>
@@ -133,7 +136,7 @@ export default {
       balloon.style.top = '70%';
       gsap.to(balloon, {
         y: -2000,
-        duration: 4,
+        duration: 24,
         onUpdate: this.hitTester,
         onUpdateParams: [balloonObj, balloon],
       });
@@ -276,5 +279,12 @@ export default {
     }
     .yellowCheck {
         fill: yellow;
+    }
+    @font-face {
+      font-family: GothamMedium;
+      src: url('../assets/font/gotham-score.otf');
+    }
+    .font-gotham {
+      font-family: GothamMedium;
     }
 </style>

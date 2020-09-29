@@ -1,22 +1,17 @@
 <template>
     <div class="container mx-auto flex flex-col justify-center align-center h-screen">
         <div class="m-auto">
-            <p class="text-6xl font-extrabold text-center fuckthis">
-                STAY AHEAD!
-            </p>
-            <p class="text-5xl font-extrabold text-center fuckthis">
-                Try Again?
-            </p>
+            <img :src="require('@/assets/img/Group 31.png')" class="w-full mx-auto max-w-lg" />
             <div class="flex flex-row mt-16 justify-center flex-wrap
             gap-2 mx-2">
-                <div class="bg-mechanics border-mechanics px-1 py-1
+                <div class="border-mechanics px-1 py-1
                 max-w-sm rounded-lg w-48 flex-grow flex">
                     <router-link to="/" class="bg-alphacamp text-white font-gotham
                     text-xl px-3 py-2 rounded-md font-bold w-full text-center flex-grow">
                         Back to Home
                     </router-link>
                 </div>
-                <div class="bg-mechanics border-mechanics px-1 py-1
+                <div class="border-mechanics px-1 py-1
                 max-w-sm rounded-lg w-48 flex-grow flex">
                     <router-link to="/game" class="bg-alphacamp text-white font-gotham
                     text-xl px-3 py-2 rounded-md font-bold w-full text-center flex-grow">
@@ -51,10 +46,10 @@ export default {
   color: #6A3D08;
 }
 .bg-alphacamp {
-  background-color: #6D3B00;
+  background-color: #24397A;
 }
 .border-mechanics {
-  border: solid #6A3D08;
+  border: solid #24397A;
 }
 @font-face {
     font-family: GothamMedium;

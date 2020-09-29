@@ -1,8 +1,9 @@
 <template>
   <div id="mechanics-mm" class="flex flex-col container mx-auto justify-center">
-        <img :src="require('@/assets/svg/mechanics-header.svg')" />
+        <img :src="require('@/assets/img/MECHANICS.png')"
+        class="mx-auto max-w-md mt-10 p-4 w-full"/>
         <div class="bg-mechanics border-4 border-mechanics
-        text-mechanics flex flex-col mt-10">
+        text-mechanics flex flex-col mt-10 m-10">
             <div class="flex flex-row flex-wrap justify-around items-center">
                 <div class="max-w-3xl p-10">
                     <p class="text-2xl font-medium pb-4">
