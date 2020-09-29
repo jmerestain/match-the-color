@@ -1,9 +1,6 @@
 <template>
   <div id="mechanics-mm" class="flex flex-col container mx-auto justify-center">
-        <h1 class="text-center text-6xl fuckthis
-        uppercase font-bold px-2 text-4xl md:text-6xl lg:text-6xl">
-          Mechanics
-        </h1>
+        <img :src="require('@/assets/svg/mechanics-header.svg')" />
         <div class="bg-mechanics border-4 border-mechanics
         text-mechanics flex flex-col mt-10">
             <div class="flex flex-row flex-wrap justify-around items-center">

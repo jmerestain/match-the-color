@@ -128,9 +128,6 @@ export default {
         onDrag() {
           parent.hitTester(balloonObj, balloon);
         },
-        onDragEnd() {
-          parent.hitTester(balloonObj, balloon);
-        },
       });
       balloon.style.left = `${position}px`;
       balloon.style.top = '70%';
@@ -140,13 +137,13 @@ export default {
       });
       balloon.timeline.to(balloon, {
         y: -460,
-        duration: 5,
+        duration: 4,
       });
       // eslint-disable-next-line no-restricted-globals
     },
     hitTester(balloonObj, balloon) {
       console.log('PLAYED');
-      if (Draggable.hitTest(balloon, '#redCheck')) {
+      if (Draggable.hitTest(balloon, '#redCheck', 10)) {
         console.log('HELLO RED');
         if (balloonObj.wordId == 'RED') {
           console.log('SCORED RED');
@@ -154,21 +151,21 @@ export default {
         }
         this.activeBalloons.splice(balloonObj.id, 1);
       }
-      if (Draggable.hitTest(balloon, '#blueCheck')) {
+      if (Draggable.hitTest(balloon, '#blueCheck', 10)) {
         if (balloonObj.wordId == 'BLUE') {
           console.log('HELLO BLUE');
           this.score += 1;
         }
         this.activeBalloons.splice(balloonObj.id, 1);
       }
-      if (Draggable.hitTest(balloon, '#greenCheck')) {
+      if (Draggable.hitTest(balloon, '#greenCheck', 10)) {
         console.log('HELLO GREEN');
         if (balloonObj.wordId == 'GREEN') {
           this.score += 1;
         }
         this.activeBalloons.splice(balloonObj.id, 1);
       }
-      if (Draggable.hitTest(balloon, '#yellowCheck')) {
+      if (Draggable.hitTest(balloon, '#yellowCheck', 10)) {
         console.log('HELLO YELLOW');
         if (balloonObj.wordId == 'YELLOW') {
           this.score += 1;
