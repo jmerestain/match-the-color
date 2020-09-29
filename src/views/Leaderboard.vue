@@ -8,10 +8,11 @@
                 <div class="pt-20">
                     <img src="../assets/img/Your rank is.png"
                     class="mx-auto max-w-xs mt-10 p-4 w-full"/>
-                    <h1 class="text-center text-6xl uppercase
-                    font-black text-alphacamp">
-                        {{ this.$store.state.highScore }}
-                    </h1>
+                    <div class="flex flex-row text-center text-6xl uppercase max-w-md
+                    font-black text-white justify-around items-baseline banner mx-auto">
+                        <p>1</p>
+                        <p>{{ this.$store.state.highScore }} <small>pts</small></p>
+                    </div>
                 </div>
                 <div class="flex flex-row justify-center mt-10">
                     <router-link to="/leaderboard" class="bg-alphacamp font-gotham text-center
@@ -32,7 +33,7 @@ import store from '../store';
 import router from '../router';
 
 export default {
-  name: 'Leaderboard',
+  name: 'Score',
 };
 </script>
 
@@ -60,5 +61,11 @@ export default {
 }
 .border-mechanics {
     border: solid #6A3D08;
+}
+.banner {
+    background: linear-gradient(90deg, rgba(183, 129, 40, 0) 0%,
+    rgba(183, 129, 40, 0.7) 23.45%, rgba(183, 129, 40, 0.9) 48.63%,
+    rgba(183, 129, 40, 0.7) 75.29%, rgba(183, 129, 40, 0) 94.79%);
+    backdrop-filter: blur(5px);
 }
 </style>
