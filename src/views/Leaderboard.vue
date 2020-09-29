@@ -8,11 +8,16 @@
                 <div class="pt-20">
                     <img src="../assets/img/Your rank is.png"
                     class="mx-auto max-w-xs mt-10 p-4 w-full"/>
-                    <div class="flex flex-row text-center text-6xl uppercase max-w-md
-                    font-black text-white justify-around items-center banner mx-auto p-2
-                    select-none">
-                        <p>1</p>
-                        <p>{{ this.$store.state.highScore }}</p>
+                    <div v-if="!loading" class="flex flex-row text-center
+                    text-6xl uppercase max-w-md font-black text-white
+                    justify-around items-center banner mx-auto p-2 select-none">
+                        <p>{{ rank }}</p>
+                        <p>{{ score }}</p>
+                    </div>
+                    <div v-if="loading" class="flex flex-row text-center
+                    text-6xl uppercase max-w-md font-medium text-white
+                    justify-around items-center banner mx-auto p-2 select-none">
+                        <p>Loading</p>
                     </div>
                 </div>
                 <div class="flex flex-row justify-center mt-10">
@@ -29,12 +34,34 @@
 
 <script>
 /* eslint-disable no-unused-vars */
+import axios from 'axios';
 import store from '../store';
 // eslint-disable-next-line import/no-cycle
 import router from '../router';
 
 export default {
   name: 'Score',
+  data() {
+    return {
+      rank: 55,
+      loading: true,
+      score: 0,
+    };
+  },
+  methods: {
+    async getRanking() {
+      this.loading = true;
+      await axios.get(`https://alphacamp-wc-cme.com/api/ranking.php?game_id=2&uid=${this.$store.state.userId}`).then(
+        (response) => {
+          this.rank = response.data.rank;
+          this.score = response.data.score;
+          this.$store.commit('setRank', this.rank);
+          this.$store.commit('setScore', this.score);
+          this.loading = false;
+        },
+      );
+    },
+  },
 };
 </script>
 

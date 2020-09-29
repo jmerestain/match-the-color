@@ -66,6 +66,7 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable semi */
 /* eslint-disable import/no-cycle */
+import axios from 'axios';
 import Balloon from '@/components/Balloon.vue';
 import { gsap } from 'gsap';
 import { Draggable } from 'gsap/Draggable';
@@ -148,7 +149,6 @@ export default {
         onUpdate: this.hitTester,
         onUpdateParams: [balloonObj, balloon],
       });
-      // eslint-disable-next-line no-restricted-globals
     },
     hitTester(balloonObj, balloon) {
       console.log('PLAYED');
@@ -159,7 +159,6 @@ export default {
           this.score += 1;
         }
         balloon.parentNode.removeChild(balloon);
-        // this.activeBalloons.splice(this.activeBalloons.indexOf(balloon), 1);
       }
       if (Draggable.hitTest(balloon, '#blueCheck', 5)) {
         if (balloonObj.wordId == 'BLUE') {
@@ -167,7 +166,6 @@ export default {
           this.score += 1;
         }
         balloon.parentNode.removeChild(balloon);
-        // this.activeBalloons.splice(this.activeBalloons.indexOf(balloon), 1);
       }
       if (Draggable.hitTest(balloon, '#greenCheck', 5)) {
         console.log('HELLO GREEN');
@@ -175,7 +173,6 @@ export default {
           this.score += 1;
         }
         balloon.parentNode.removeChild(balloon);
-        // this.activeBalloons.splice(this.activeBalloons.indexOf(balloon), 1);
       }
       if (Draggable.hitTest(balloon, '#yellowCheck', 5)) {
         console.log('HELLO YELLOW');
@@ -183,7 +180,6 @@ export default {
           this.score += 1;
         }
         balloon.parentNode.removeChild(balloon);
-        // this.activeBalloons.splice(this.activeBalloons.indexOf(balloon), 1);
       }
     },
     startGame() {
@@ -193,15 +189,25 @@ export default {
     startTimer() {
       clearInterval(this.timer.instance);
       this.timer.time = 60;
-      this.timer.instance = setInterval(() => {
+      this.timer.instance = setInterval(async () => {
         this.timer.time -= 1;
         if (this.timer.time <= 0) {
           clearInterval(this.timer.balloonMaker);
           clearInterval(this.timer.instance);
+          this.sendScore(this.score);
           this.$store.commit('setScore', this.score);
           this.goLeaderboard();
         }
       }, 1000);
+    },
+    async sendScore(score) {
+      axios.post('https://alphacamp-wc-cme.com/api/get_user.php', {
+        uid: this.$store.state.userId,
+        game_id: 2,
+        score,
+      }).then((response) => {
+        console.log(response);
+      });
     },
     startMaker() {
       clearInterval(this.timer.balloonMaker);

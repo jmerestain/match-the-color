@@ -6,24 +6,32 @@
         border-4 my-auto mx-5">
             <div class="bg-mechanics p-5 pt-16">
                 <div class="flex flex-col gap-1 w-full font-gotham text-2xl px-10 select-none">
+                    <div v-if="!loading" class="flex flex-col
+                    w-full font-gotham text-2xl px-10 select-none">
+                        <div v-for="entry in scoreArr" class="w-full flex-grow banner rounded-lg
+                        text-white flex flex-row justify-between p-3 max-w-lg mx-auto font-black
+                        lg:text-4xl font-black px-10 gap-2" :key="entry.id">
+                            <p class="text-center">{{ entry.rank }}</p>
+                            <p class="text-right">{{ entry.score }}</p>
+                        </div>
+                    </div>
+                    <div v-else class="flex flex-col
+                    w-full font-gotham text-2xl px-10 select-none">
+                        <p class="text-center">Loading!</p>
+                    </div>
+                    <p class="text-lg font-bold
+                    text-alphacamp text-center pt-3">
+                        Your Score
+                    </p>
                     <div class="w-full flex-grow banner rounded-lg
                     text-white flex flex-row justify-between p-3 max-w-lg mx-auto font-black
                     lg:text-4xl font-black px-10 gap-2">
-                        <p class="text-center">1</p>
-                        <p class="text-right">200</p>
+                        <p class="text-center">{{ this.$store.state.rank }}</p>
+                        <p class="text-right">{{ this.$store.state.highScore }}</p>
                     </div>
-                    <div class="w-full flex-grow banner rounded-lg text-center align-middle
-                    text-white flex flex-row justify-between p-3 max-w-lg mx-auto font-black
-                    lg:text-4xl font-black px-10 gap-2">
-                        <p class="text-left">2</p>
-                        <p class="text-right">100</p>
-                    </div>
-                    <div class="w-full flex-grow banner rounded-lg align-middle
-                    text-white flex flex-row justify-between p-3 max-w-lg mx-auto font-black
-                    lg:text-4xl font-black px-10 gap-2">
-                        <p class="text-left">3</p>
-                        <p class="text-right">50</p>
-                    </div>
+                    <p class="text-lg font-bold font-gotham text-alphacamp text-center pt-3">
+                        Note: The <span class="text-first26">First 26</span> gets an Alpha Token
+                    </p>
                 </div>
                 <div class="flex flex-row justify-center mt-10">
                     <router-link to="/ending" class="bg-alphacamp font-gotham text-center
@@ -38,17 +46,36 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'Ranking',
   data() {
     return {
-      userId: '',
+      loading: true,
+      scoreArr: [],
     };
+  },
+  methods: {
+    getLeaderboard() {
+      axios.get('https://alphacamp-wc-cme.com/leaderboard.php?game_id=1').then(
+        (response) => {
+          this.scoreArr = response.data;
+          this.loading = false;
+        },
+      );
+    },
+  },
+  mounted() {
+    this.getLeaderboard();
   },
 };
 </script>
 
 <style scoped>
+.text-first26 {
+  color: #24397A;
+}
 @font-face {
     font-family: GothamMedium;
     src: url('../assets/font/gotham-score.otf');

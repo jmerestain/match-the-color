@@ -2,6 +2,9 @@
     <div class="container mx-auto flex flex-col justify-center align-center h-screen">
         <div class="m-auto">
             <img src="../assets/img/Group 31.png" class="w-full mx-auto max-w-lg" />
+            <p class="text-lg font-bold font-gotham text-mechanics text-center pt-3">
+              Note: The <span class="text-first26">First 26</span> gets an Alpha Token
+            </p>
             <div class="flex flex-row mt-16 justify-center flex-wrap
             gap-2 mx-2">
                 <div class="border-mechanics px-1 py-1
@@ -30,6 +33,9 @@ export default {
 </script>
 
 <style scoped>
+.text-first26 {
+  color: #24397A;
+}
 .fuckthis {
     text-align: center;
     color: #FFFFFF;

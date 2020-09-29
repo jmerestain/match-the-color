@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     highScore: 0,
     userId: '',
+    rank: 55,
   },
   mutations: {
     setScore(state, score) {
@@ -14,6 +15,9 @@ export default new Vuex.Store({
     },
     setUid(state, uid) {
       state.userId = uid;
+    },
+    setRank(state, rank) {
+      state.rank = rank;
     },
   },
   actions: {
