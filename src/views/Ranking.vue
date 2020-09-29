@@ -7,12 +7,12 @@
                 class="mx-auto max-w-4xl mt-10 p-4 w-full" />
                 <div class="flex flex-col gap-1 w-full font-gotham text-2xl px-10">
                     <div class="w-full flex-grow bg-alphacamp rounded-lg
-                    text-white flex flex-row justify-between p-3">
+                    text-white flex flex-row justify-between p-3 max-w-lg mx-auto">
                         <p>1</p>
                         <p>200</p>
                     </div>
                     <div class="w-full flex-grow bg-alphacamp rounded-lg
-                    text-white flex flex-row justify-between p-3">
+                    text-white flex flex-row justify-between p-3 max-w-lg mx-auto">
                         <p>2</p>
                         <p>100</p>
                     </div>
@@ -30,15 +30,12 @@
 </template>
 
 <script>
-import axios from 'axios';
-
 export default {
   name: 'Ranking',
-  mounted() {
-    axios.get('https://alphacamp-wc-cme.com/api/get_user.php?uid=1')
-      .then((response) => {
-        console.log(response);
-      });
+  data() {
+    return {
+      userId: '',
+    };
   },
 };
 </script>

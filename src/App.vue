@@ -4,6 +4,21 @@
   </div>
 </template>
 
+<script>
+import axios from 'axios';
+
+export default {
+  name: 'App',
+  mounted() {
+    axios.get('https://alphacamp-wc-cme.com/api/get_user.php')
+      .then((response) => {
+        console.log(response);
+        this.$store.commit('setUid', response.data.uid);
+      });
+  },
+};
+</script>
+
 <style>
   #app {
     background-image: url('./assets/svg/background.svg');

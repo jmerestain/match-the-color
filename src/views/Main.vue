@@ -131,6 +131,14 @@ export default {
         onDrag() {
           parent.hitTester(balloonObj, balloon);
         },
+        onRelease() {
+          gsap.to(balloon, {
+            y: -2000,
+            duration: 24,
+            onUpdate: this.hitTester,
+            onUpdateParams: [balloonObj, balloon],
+          });
+        },
       });
       balloon.style.left = `${position}px`;
       balloon.style.top = '70%';
