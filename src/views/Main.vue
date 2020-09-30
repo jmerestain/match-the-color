@@ -36,6 +36,7 @@
                         v-for="balloon in activeBalloons"
                         :key="balloon.balloonId"
                         :word="balloon.wordId"
+                        :colorCode="balloon.textId"
                     />
             </div>
         </div>
@@ -116,12 +117,14 @@ export default {
     async createBalloon() {
       const wordId = this.randomId();
       const colorId = this.randomId();
-      const position = Math.random() * document.querySelector('#box').getBoundingClientRect().right;
+      const boxSize = document.querySelector('#balloons').getBoundingClientRect().right - 100;
+      const position = Math.random() * boxSize;
       const parent = this;
       const balloonObj = {
         colorId: this.colorIdParse(colorId),
         wordId: this.wordIdParse(wordId),
         balloonId: this.balloonId,
+        textId: colorId,
       };
       await this.activeBalloons.push(balloonObj);
       this.board = await this.$el.querySelectorAll('.floating-balloon');

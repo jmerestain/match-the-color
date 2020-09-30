@@ -1,6 +1,7 @@
 <template>
     <div id="porn">
-            <p id="word" class="absolute text-center font-bold text-lg w-full z-30">
+            <p id="word" :class="`absolute text-center font-black
+            text-lg w-full z-30 ${getColor(colorCode)}`">
                 {{ word }}
             </p>
             <svg id="balloon" :fill="colorParse" width="572" height="725" viewBox="0 0 572 725" xmlns="http://www.w3.org/2000/svg">
@@ -24,10 +25,25 @@ export default {
   props: {
     word: String,
     colorParse: String,
+    colorCode: Number,
   },
   components: {
   },
   methods: {
+    getColor(code) {
+      switch (code) {
+        case 2:
+          return 'text-red-300';
+        case 1:
+          return 'text-blue-500';
+        case 3:
+          return 'text-green-500';
+        case 4:
+          return 'text-yellow-600';
+        default:
+          return 'text-black';
+      }
+    },
   },
 };
 </script>
@@ -43,7 +59,6 @@ export default {
         left: 50%;
     }
     #word {
-        color: rgba(19, 12, 12, 0.4);
         top: 30%;
     }
 </style>

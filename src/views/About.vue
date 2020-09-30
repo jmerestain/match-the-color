@@ -7,24 +7,24 @@
             <div class="flex flex-row flex-wrap justify-around items-center">
                 <div class="max-w-3xl p-10">
                     <p class="text-2xl font-medium pb-4">
-                        A timed challenge where players group balloons by colors.
+                        A timed challenge where players group balloons by their color names.
                     </p>
                     <ul class="pl-4 space-y-3">
                       <li>
                         <p class="text-xl font-medium">
-                            In 60 seconds, group the balloons according to the written
-                            color on the balloon.
+                            In 60 seconds, group the balloons according
+                            to the written color inside the balloon.
                         </p>
                       </li>
                       <li>
                         <p class="text-xl font-medium">
-                            Watch out, some balloons have the wrong color name written on them.
-                            Don’t get confused!
+                            Don't be confused! Some colored balloons have
+                            the wrong name color written on them.
                         </p>
                       </li>
                       <li>
                         <p class="text-xl font-medium">
-                            The more balloons cleared, the higher the score. You can do it!
+                            The more matched balloons, the higher the score. You can do it!
                         </p>
                       </li>
                     </ul>
