@@ -7,7 +7,7 @@
             <div class="flex flex-row flex-wrap justify-around items-center">
                 <div class="max-w-3xl p-10">
                     <p class="text-2xl font-medium pb-4">
-                        A timed challenge where players group ballons by colors.
+                        A timed challenge where players group balloons by colors.
                     </p>
                     <ul class="pl-4 space-y-3">
                       <li>

@@ -135,7 +135,7 @@ export default {
         onRelease() {
           gsap.to(balloon, {
             y: -2000,
-            duration: 24,
+            duration: 28,
             onUpdate: this.hitTester,
             onUpdateParams: [balloonObj, balloon],
           });
@@ -145,7 +145,7 @@ export default {
       balloon.style.top = '70%';
       gsap.to(balloon, {
         y: -2000,
-        duration: 24,
+        duration: 28,
         onUpdate: this.hitTester,
         onUpdateParams: [balloonObj, balloon],
       });
@@ -213,7 +213,7 @@ export default {
       clearInterval(this.timer.balloonMaker);
       this.timer.balloonMaker = setInterval(() => {
         this.createBalloon();
-      }, 500);
+      }, 800);
     },
     // eslint-disable-next-line consistent-return
     wordIdParse(colorId) {

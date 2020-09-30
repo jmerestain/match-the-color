@@ -24,6 +24,7 @@ export default {
     background-image: url('./assets/svg/background.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: GothamMedium;
   }
   #banner {
     background: linear-gradient(90deg, rgba(183, 129, 40, 0) 0%,
@@ -33,5 +34,12 @@ export default {
   }
   .button-color {
     background-color: #6D3B00;
+  }
+  @font-face {
+    font-family: GothamMedium;
+    src: url('./assets/font/gotham-score.otf');
+  }
+  .font-gotham {
+    font-family: GothamMedium;
   }
 </style>
