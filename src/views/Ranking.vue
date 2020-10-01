@@ -34,9 +34,9 @@
                     </p>
                 </div>
                 <div class="flex flex-row justify-center mt-10">
-                    <router-link to="/ending" class="bg-started title text-center
+                    <router-link to="/ending" class="bg-started text-center
                     py-3 px-4 text-3xl text-white font-bold rounded-lg flex-grow max-w-xs
-                    font-bold">
+                    font-bold select-none title uppercase">
                         Next
                     </router-link>
                 </div>
@@ -58,7 +58,7 @@ export default {
   },
   methods: {
     getLeaderboard() {
-      axios.get('https://alphacamp-wc-cme.com/leaderboard.php?game_id=1').then(
+      axios.get('https://alphacamp-wc-cme.com/leaderboard.php?game_id=2').then(
         (response) => {
           this.scoreArr = response.data;
           this.loading = false;

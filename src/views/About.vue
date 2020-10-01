@@ -12,8 +12,8 @@
                     <ul class="pl-4 space-y-3">
                       <li>
                         <p class="text-xl font-medium">
-                            In 60 seconds, group the balloons according
-                            to the written color inside the balloon.
+                            You have 60 seconds to group the balloons according
+                            to the <strong>written color</strong> inside the balloon.
                         </p>
                       </li>
                       <li>
