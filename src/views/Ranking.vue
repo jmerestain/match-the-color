@@ -34,7 +34,7 @@
                     </p>
                 </div>
                 <div class="flex flex-row justify-center mt-10">
-                    <router-link to="/ending" class="bg-alphacamp font-gotham text-center
+                    <router-link to="/ending" class="bg-started title text-center
                     py-3 px-4 text-3xl text-white font-bold rounded-lg flex-grow max-w-xs
                     font-bold">
                         Next
@@ -73,6 +73,9 @@ export default {
 </script>
 
 <style scoped>
+.bg-started {
+    background: #24397A;
+}
 .text-first26 {
   color: #24397A;
 }
@@ -105,5 +108,16 @@ export default {
     rgba(183, 129, 40, 0.7) 23.45%, rgba(183, 129, 40, 0.9) 48.63%,
     rgba(183, 129, 40, 0.7) 75.29%, rgba(183, 129, 40, 0) 94.79%);
     backdrop-filter: blur(5px);
+}
+@font-face {
+    font-family: ChalkitUp;
+    src: url('../assets/font/chalkitup-title.ttf');
+}
+.font-gotham {
+    font-family: GothamMedium;
+}
+.title {
+    font-family: ChalkitUp;
+    font-weight: 300;
 }
 </style>

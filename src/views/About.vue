@@ -34,8 +34,8 @@
                 :src="require('@/assets/img/mech-1-ex.png')" />
             </div>
             <router-link to="/game" class="text-white uppercase text-3xl
-            bg-alphacamp py-2 px-8 mb-2 border-2 border-mechanics
-            border-double mx-auto text-center">
+            bg-started py-2 px-8 mb-2 border-2 rounded-lg
+            border-double mx-auto text-center title tracking-wider">
                 Ready
             </router-link>
         </div>
@@ -61,13 +61,11 @@ export default {
 .border-mechanics {
   border: solid #6A3D08;
 }
-.fuckthis {
-    text-align: center;
-    color: #FFFFFF;
-    color: #6D3B00;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #6D3B00;
-    text-shadow: -1px 1px 3px rgba(109, 59, 0, 0.8), -3px 3px 1px rgba(109, 59, 0, 0.6);
+.bg-started {
+    background: #24397A;
+  }
+.title {
+    font-family: ChalkitUp;
+    font-weight: 300;
 }
 </style>

@@ -20,6 +20,9 @@ export default {
 </script>
 
 <style>
+  .bg-started {
+    background: #24397A;
+  }
   #app {
     background-image: url('./assets/svg/background.svg');
     background-repeat: no-repeat;
@@ -39,7 +42,15 @@ export default {
     font-family: GothamMedium;
     src: url('./assets/font/gotham-score.otf');
   }
+  @font-face {
+    font-family: ChalkitUp;
+    src: url('./assets/font/chalkitup-title.ttf');
+  }
   .font-gotham {
     font-family: GothamMedium;
+  }
+  .title {
+    font-family: ChalkitUp;
+    font-weight: 300;
   }
 </style>

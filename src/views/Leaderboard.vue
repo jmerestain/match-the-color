@@ -21,9 +21,9 @@
                     </div>
                 </div>
                 <div class="flex flex-row justify-center mt-10">
-                    <router-link to="/leaderboard" class="bg-alphacamp font-gotham text-center
+                    <router-link to="/leaderboard" class="bg-started text-center
                     py-3 px-4 text-3xl text-white font-bold rounded-lg flex-grow max-w-xs
-                    font-bold select-none">
+                    font-bold select-none title">
                         Next
                     </router-link>
                 </div>
@@ -66,6 +66,10 @@ export default {
 </script>
 
 <style scoped>
+.title {
+    font-family: ChalkitUp;
+    font-weight: 300;
+}
 @font-face {
     font-family: GothamMedium;
     src: url('../assets/font/gotham-score.otf');

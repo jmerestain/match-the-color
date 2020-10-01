@@ -41,9 +41,9 @@
             </div>
         </div>
         <div id="controls" class="flex flex-row gap-1 flex-grow items-center container mx-auto">
-            <a href="#" class="bg-alphacamp text-white text-xl lg:text-4xl md:text-4xl flex-grow
+            <a href="#" class="bg-started text-white text-xl lg:text-4xl md:text-4xl flex-grow
             text-center h-20 p-3 select-none my-auto font-medium flex-shrink font-gotham
-            font-bold"
+            font-bold title"
             @click="startGame">
                 Play Now
             </a>
@@ -255,6 +255,9 @@ export default {
 </script>
 
 <style scoped>
+    .bg-started {
+      background: #24397A;
+    }
     #play {
         height: 3rem;
         width: 3rem;
@@ -303,5 +306,13 @@ export default {
     }
     .font-gotham {
       font-family: GothamMedium;
+    }
+    .title {
+    font-family: ChalkitUp;
+    font-weight: 300;
+    }
+    @font-face {
+      font-family: ChalkitUp;
+      src: url('../assets/font/chalkitup-title.ttf');
     }
 </style>
