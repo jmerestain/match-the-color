@@ -43,7 +43,7 @@
         <div id="controls" class="flex flex-row gap-1 flex-grow items-center container mx-auto">
             <a href="#" class="bg-started text-white text-xl lg:text-4xl md:text-4xl flex-grow
             text-center h-20 p-3 select-none my-auto font-medium flex-shrink font-gotham
-            font-bold title"
+            font-bold title uppercase"
             @click="startGame">
                 Play Now
             </a>
