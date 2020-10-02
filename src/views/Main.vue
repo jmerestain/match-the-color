@@ -154,35 +154,39 @@ export default {
       });
     },
     hitTester(balloonObj, balloon) {
-      console.log('PLAYED');
-      if (Draggable.hitTest(balloon, '#redCheck', 5)) {
-        console.log('HELLO RED');
-        if (balloonObj.wordId == 'RED') {
-          console.log('SCORED RED');
-          this.score += 100;
+      try {
+        console.log('PLAYED');
+        if (Draggable.hitTest(balloon, '#redCheck', 5)) {
+          console.log('HELLO RED');
+          if (balloonObj.wordId == 'RED') {
+            console.log('SCORED RED');
+            this.score += 100;
+          }
+          balloon.parentNode.removeChild(balloon);
         }
-        balloon.parentNode.removeChild(balloon);
-      }
-      if (Draggable.hitTest(balloon, '#blueCheck', 5)) {
-        if (balloonObj.wordId == 'BLUE') {
-          console.log('HELLO BLUE');
-          this.score += 100;
+        if (Draggable.hitTest(balloon, '#blueCheck', 5)) {
+          if (balloonObj.wordId == 'BLUE') {
+            console.log('HELLO BLUE');
+            this.score += 100;
+          }
+          balloon.parentNode.removeChild(balloon);
         }
-        balloon.parentNode.removeChild(balloon);
-      }
-      if (Draggable.hitTest(balloon, '#greenCheck', 5)) {
-        console.log('HELLO GREEN');
-        if (balloonObj.wordId == 'GREEN') {
-          this.score += 100;
+        if (Draggable.hitTest(balloon, '#greenCheck', 5)) {
+          console.log('HELLO GREEN');
+          if (balloonObj.wordId == 'GREEN') {
+            this.score += 100;
+          }
+          balloon.parentNode.removeChild(balloon);
         }
-        balloon.parentNode.removeChild(balloon);
-      }
-      if (Draggable.hitTest(balloon, '#yellowCheck', 5)) {
-        console.log('HELLO YELLOW');
-        if (balloonObj.wordId == 'YELLOW') {
-          this.score += 100;
+        if (Draggable.hitTest(balloon, '#yellowCheck', 5)) {
+          console.log('HELLO YELLOW');
+          if (balloonObj.wordId == 'YELLOW') {
+            this.score += 100;
+          }
+          balloon.parentNode.removeChild(balloon);
         }
-        balloon.parentNode.removeChild(balloon);
+      } catch (e) {
+        console.log('Game has ended');
       }
     },
     startGame() {
