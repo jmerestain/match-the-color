@@ -155,39 +155,33 @@ export default {
     },
     hitTester(balloonObj, balloon) {
       try {
-        console.log('PLAYED');
         if (Draggable.hitTest(balloon, '#redCheck', 5)) {
-          console.log('HELLO RED');
           if (balloonObj.wordId == 'RED') {
-            console.log('SCORED RED');
             this.score += 100;
           }
           balloon.parentNode.removeChild(balloon);
         }
         if (Draggable.hitTest(balloon, '#blueCheck', 5)) {
           if (balloonObj.wordId == 'BLUE') {
-            console.log('HELLO BLUE');
             this.score += 100;
           }
           balloon.parentNode.removeChild(balloon);
         }
         if (Draggable.hitTest(balloon, '#greenCheck', 5)) {
-          console.log('HELLO GREEN');
           if (balloonObj.wordId == 'GREEN') {
             this.score += 100;
           }
           balloon.parentNode.removeChild(balloon);
         }
         if (Draggable.hitTest(balloon, '#yellowCheck', 5)) {
-          console.log('HELLO YELLOW');
           if (balloonObj.wordId == 'YELLOW') {
             this.score += 100;
           }
           balloon.parentNode.removeChild(balloon);
         }
       } catch (e) {
-        console.log('Game has ended');
         clearInterval(this.timer.instance);
+        clearInterval(this.timer.balloonMaker);
       }
     },
     startGame() {
@@ -200,6 +194,7 @@ export default {
       this.timer.instance = setInterval(async () => {
         this.timer.time -= 1;
         if (this.timer.time <= 0) {
+          this.activeBalloons = [];
           clearInterval(this.timer.balloonMaker);
           clearInterval(this.timer.instance);
           this.sendScore(this.score);
@@ -209,7 +204,7 @@ export default {
       }, 1000);
     },
     async sendScore(score) {
-      axios.post('https://beta.alphacamp-wc-cme.com/api/get_user.php', {
+      axios.post('https://beta.alphacamp-wc-cme.com/api/add_score.php', {
         uid: this.$store.state.userId,
         game_id: 2,
         score,
@@ -225,7 +220,6 @@ export default {
     },
     // eslint-disable-next-line consistent-return
     wordIdParse(colorId) {
-      console.log(colorId);
       switch (colorId) {
         default:
           return 'RED';

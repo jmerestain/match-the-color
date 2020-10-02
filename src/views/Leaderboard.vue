@@ -54,6 +54,7 @@ export default {
   methods: {
     async getRanking() {
       this.loading = true;
+      console.log(`Getting https://beta.alphacamp-wc-cme.com/api/ranking.php?game_id=2&uid=${this.$store.state.userId}`);
       await axios.get(`https://beta.alphacamp-wc-cme.com/api/ranking.php?game_id=2&uid=${this.$store.state.userId}`).then(
         (response) => {
           this.rank = response.data.rank;
