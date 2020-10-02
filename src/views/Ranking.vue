@@ -58,7 +58,7 @@ export default {
   },
   methods: {
     getLeaderboard() {
-      axios.get('https://alphacamp-wc-cme.com/api/leaderboard.php?game_id=2').then(
+      axios.get('https://beta.alphacamp-wc-cme.com/api/leaderboard.php?game_id=2').then(
         (response) => {
           this.scoreArr = response.data;
           this.loading = false;

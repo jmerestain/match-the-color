@@ -10,7 +10,7 @@ import axios from 'axios';
 export default {
   name: 'App',
   mounted() {
-    axios.get('https://alphacamp-wc-cme.com/api/get_user.php')
+    axios.get('https://beta.alphacamp-wc-cme.com/api/get_user.php')
       .then((response) => {
         console.log(response);
         this.$store.commit('setUid', response.data.uid);

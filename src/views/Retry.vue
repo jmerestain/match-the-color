@@ -9,10 +9,10 @@
             gap-2 mx-2">
                 <div class="border-mechanics px-1 py-1
                 max-w-sm rounded-lg w-48 flex-grow flex">
-                    <router-link to="/" class="mm-button text-white uppercase
+                    <a href="https://beta.alphacamp-wc-cme.com" class="mm-button text-white uppercase
                     text-xl px-3 py-2 rounded-md font-bold w-full text-center flex-grow">
                         Back to Home
-                    </router-link>
+                    </a>
                 </div>
                 <div class="border-mechanics px-1 py-1
                 max-w-sm rounded-lg w-48 flex-grow flex">
