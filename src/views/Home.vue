@@ -1,7 +1,7 @@
 <template>
   <div class="home container mx-auto flex-col justify-center flex pt-10">
     <img class="mx-auto pb-10"
-    src="../assets/svg/logo.svg" height="260px" width="320px"/>
+    src="../assets/img/logo.png" height="260px" width="320px"/>
     <div id="banner" class="w-full mx-auto my-auto p-3 mb-20 border-t-2 border-b-2 border-white">
       <p class="text-6xl text-white font-medium uppercase text-center select-none
       title tracking-wider">
