@@ -187,6 +187,7 @@ export default {
         }
       } catch (e) {
         console.log('Game has ended');
+        clearInterval(this.timer.instance);
       }
     },
     startGame() {
